@@ -14,12 +14,7 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
-                        .allowedOrigins(
-                                "http://localhost:3000",
-                                "http://localhost:3001",
-                                "https://portfolio-tracker-frontend-one.vercel.app",
-                                "https://portfolio-tracker-frontend-osaarebdi-lukasz-s-projects0.vercel.app"
-                        )
+                        .allowedOriginPatterns("*")
                         .allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE")
                         .allowedHeaders("*");
 
